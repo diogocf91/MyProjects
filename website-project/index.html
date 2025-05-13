@@ -4,11 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first test</title>
+    <style>
+        body{
+            background: rgb(68, 125, 199);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
 </head>
 <body>
     <h1>First project</h1>    
-    <hr>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At ducimus ut facilis rem animi eaque quia quaerat eius eos, magnam provident recusandae molestias velit nemo itaque in, dignissimos reiciendis enim.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere cumque, laboriosam nesciunt ut aut consequatur tempore asperiores molestias ad eaque incidunt quas consectetur ipsa ex nam neque unde explicabo ea.</p>
+    <p id="par">Teste 01</p> 
+    <p class="par">Teste 02</p>
+    <div>Click here</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[0]/*árvore DOM começando em window e terminadno em getElementsByTagName. getElementsByTagName é uma função que seleciona múltiplos elementos, no caso todos os <p>. O [0] significa que é o primeiro <p> do documento que foi selecionado*/
+        window.document.write('Está escrito assim:' + p1.innerText)/*o comando escreve algo no documento. Nesse caso foi concatenado com a variável p1(acima) inserindo o texto contido nela com o comando innerText*/
+        
+        //Forma adequada de usar:
+        var x = window.document.querySelector('p#par') //coloca na variável x o id "par". Id é representado por # e class por ponto.
+        window.document.write(x.innerText)
+
+    </script>
 </body>
 </html>
